@@ -70,7 +70,7 @@ async function startgss() {
     const gss = gssConnect({
         logger: pino({ level: 'silent' }),
         printQRInTerminal: true,
-        browser: ['gss botwa Multi Device','Safari','1.0.0'],
+        browser: ['Adil botwa Multi Device','Safari','1.0.0'],
         auth: state,
         getMessage: async (key) => {
             if (store) {
@@ -78,7 +78,7 @@ async function startgss() {
                 return msg.message || undefined
             }
             return {
-                conversation: "Hai Im gss botwa"
+                conversation: "Hai Im Adil Kamaal"
             }
         }
     })
@@ -138,7 +138,7 @@ async function getMessage(key) {
         return msg?.message;
     }
     return {
-        conversation: "Hai im gss botwa",
+        conversation: "Hai im Adil Kamaal",
     };
 }
 
@@ -323,7 +323,7 @@ gss.ev.on('group-participants.update', async (anu) => {
         // Add your custom message when the connection is open
         console.log('Connected...', update);
         gss.sendMessage(gss.user.id, {
-            text: `*hi bro! 🫡*\n_gss botwa v2 bot has successfully connected to the server_`
+            text: `*hi bro! 🫡*\n_Adil Kamaal Bot v2 bot has successfully connected to the server_`
         });
     }
 });
