@@ -3548,12 +3548,12 @@ async function downloadAndSendMedia(m, text, isDocument) {
 
         
         if (isDocument) {
-            await gss.sendMessage(m.chat, { document: fileBuffer, mimetype: `video/mp4`, fileName, caption: 'Downloaded by gss botwa' }, { quoted: m });
+            await gss.sendMessage(m.chat, { document: fileBuffer, mimetype: `video/mp4`, fileName, caption: 'Downloaded by Adil Kamaal' }, { quoted: m });
         } else {
             if (media.type === 'image') {
-                await gss.sendMessage(m.chat, { image: fileBuffer, mimetype: 'image/jpeg', fileName, caption: 'Downloaded by gss botwa' }, { quoted: m });
+                await gss.sendMessage(m.chat, { image: fileBuffer, mimetype: 'image/jpeg', fileName, caption: 'Downloaded by Adil Kamaal' }, { quoted: m });
             } else if (media.type === 'video') {
-                await gss.sendMessage(m.chat, { video: fileBuffer, mimetype: 'video/mp4', fileName, caption: 'Downloaded by gss botwa' }, { quoted: m });
+                await gss.sendMessage(m.chat, { video: fileBuffer, mimetype: 'video/mp4', fileName, caption: 'Downloaded by Adil Kamaal' }, { quoted: m });
             } else {
                 throw new Error('Unsupported media type');
             }
