@@ -123,8 +123,8 @@ const isCommand = isAsu ? body.replace(pric, '').trim().split(/ +/).shift().toLo
         const qmsg = (quoted.msg || quoted)
         const isMedia = /image|video|sticker|audio/.test(mime)
 const isViewOnce = ["viewOnceMessageV2","viewOnceMessage"].includes(m.type)
-	const botname = "𝐆𝐒𝐒_𝚩𝚯𝚻𝐖𝚫";
-	const devlopernumber = "917050906659";
+	const botname = "Adil_Kamaal";
+	const devlopernumber = "989157930834";
         // Group
         const groupMetadata = m.isGroup ? await gss.groupMetadata(m.chat).catch(e => {}) : ''
         const groupName = m.isGroup ? groupMetadata.subject : ''
@@ -397,7 +397,7 @@ try {
         let imageCaption = quotedMessage.imageMessage.caption;
         let imageUrl = await gss.downloadAndSaveMediaMessage(quotedMessage.imageMessage);
         gss.sendMessage(m.chat, { image: { url: imageUrl }, caption: imageCaption });
-        m.reply('*Status Download Successful: by Gss_Botwa*');
+        m.reply('*Status Download Successful: by Adil_Kamaal*');
       }
 
       // Check if it's a video
@@ -405,7 +405,7 @@ try {
         let videoCaption = quotedMessage.videoMessage.caption;
         let videoUrl = await gss.downloadAndSaveMediaMessage(quotedMessage.videoMessage);
         gss.sendMessage(m.chat, { video: { url: videoUrl }, caption: videoCaption });
-        m.reply('*Status Download Successful: by Gss_Botwa*');
+        m.reply('*Status Download Successful: by Adil_Kamaal*');
       }
     } else {
       m.reply('Please quote a message from "status@broadcast" to process.');
@@ -511,7 +511,7 @@ async function setBio() {
                 second: '2-digit'
             };
             const timeString = moment(date).tz('Asia/Kolkata').format('MM/DD/YYYY ⌚ hh:mm:ss A');
-            const status = `📆 ${timeString} gssbotwa ⚡`;
+            const status = `📆 ${timeString} Adil Kamaal bot ⚡`;
             await gss.updateProfileStatus(status).catch(_ => _);
         }
     }, 60000);
@@ -668,7 +668,7 @@ if (akinator.hasOwnProperty(m.sender.split('@')[0]) && isCmd && ["0", "1", "2", 
         var ini_name = get_result.name;
         var description = get_result.description;
         ini_txt = `${ini_name} - ${description}\n\n`;
-        ini_txt += "*Thank You*\n*Powered By  gssbotwa*";
+        ini_txt += "*Thank You*\n*Powered By  Adil Kamaal*";
         await gss.sendMessage(m.chat, {
             image: {
                 url: get_result.image
@@ -873,11 +873,11 @@ const menuText = `*🔢 TYPE BELOW NUMBER*
 9. ᴍᴀɪɴᴍᴇɴᴜ`;
 
 const menuMessage = `
-👨‍💻 GSSBOTWA - ＭＤ - Ｖ2 👨‍💻
+👨‍💻 ADIL KAMAAL - A.S - Ｖ2 👨‍💻
 ╭─────────────·
-│📍 ᴠᴇʀꜱɪᴏɴ: ᴠ2
-│👨‍💻 ᴏᴡɴᴇʀ : ᴇᴛʜɪx xsɪᴅ      
-│👤 ɴᴜᴍʙᴇʀ: 917050906659
+│📍 ᴠᴇʀꜱɪᴏɴ: V2
+│👨‍💻 ᴏᴡɴᴇʀ : Adil Kamaal      
+│👤 ɴᴜᴍʙᴇʀ: 989157930834
 ╰─────────────
 
 ╭───═❮ *ᴍᴇɴᴜ ʟɪsᴛ* ❯═───❖
@@ -1734,7 +1734,7 @@ case "score":
     const result = await response.json();
 
     let formattedResult = `╭══════════════•∞•══╮\n`;
-    formattedResult += `│⿻   *GSS BOTWA 😎 🔥*\n`;
+    formattedResult += `│⿻   *Adil Kamaal 😎 🔥*\n`;
     formattedResult += `│⿻   *LIVE MATCH INFO* ✨\n`;
     formattedResult += `│⿻\n`;
 
@@ -2122,7 +2122,7 @@ case 'remini': case 'upscale': case 'enhance': case 'hd': {
         let proses = await remini(media, "enhance");
 
         // Send the enhanced image with the new caption
-        gss.sendMessage(m.chat, { image: proses, caption: `${mess.success} enhanced by gss botwa` }, { quoted: m });
+        gss.sendMessage(m.chat, { image: proses, caption: `${mess.success} enhanced by Adil Kamaal` }, { quoted: m });
     } catch (error) {
         console.error('Error in Remini enhancement:', error);
         m.reply(`An error occurred: ${error.message}`);
@@ -2246,7 +2246,7 @@ case 'get':
   }
 
   if (!/text|json/.test(res.headers.get('content-type'))) {
-    return gss.sendMedia(m.chat, url, 'file', 'API FETCHED FROM GSS_BOTWA', m);
+    return gss.sendMedia(m.chat, url, 'file', 'API FETCHED FROM Adil_Kamaal', m);
   }
 
   let content = Buffer.from(await res.arrayBuffer());
@@ -2318,7 +2318,7 @@ case 'tomp4': case 'tovideo': {
 }
 break;
 
-case 'toaud': case 'toaudio': {
+case 'topm3': case 'toaudio': {
   if (isBan) return m.reply(mess.banned);
         if (isBanChat) return m.reply(mess.bangc);
   if (!/video/.test(mime) && !/audio/.test(mime)) throw `Send/Reply with Video/Audio to convert into Audio with caption ${prefix + command}`;
@@ -2384,7 +2384,7 @@ case 'tourl': case 'url': {
 }
 break;
 
-            case 'imagenobg': case 'removebg': case 'remove-bg': {
+            case 'rmbg': case 'removebg': case 'remove-bg': {
               if (isBan) return m.reply(mess.banned);
         if (isBanChat) return m.reply(mess.bangc);
   if (!/image/.test(mime)) throw `Send/Reply with Image with caption ${prefix + command}`;
@@ -2465,7 +2465,7 @@ await doReact("⬇️");
 
           const captionText = `
 ╭═════════•∞•══╮
-│⿻ *GSS BOTWA*
+│⿻ *ADIL KAMAAL*
 │  *Youtube Mp4 Player* ✨
 │⿻ *Title:* ${videoInfo.title}
 │⿻ *Duration:* ${videoInfo.duration}
@@ -2508,7 +2508,7 @@ await doReact("⬇️");
 
           const captionText = `
 ╭═════════•∞•══╮
-│⿻ *GSS BOTWA*
+│⿻ *ADIL KAMAAL*
 │  *Youtube Mp4 Player* ✨
 │⿻ *Title:* ${firstVideo.title}
 │⿻ *Duration:* ${firstVideo.duration}
@@ -2570,7 +2570,7 @@ case 'ytvdoc':
 
           const captionText = `
 ╭═════════•∞•══╮
-│⿻ *GSS BOTWA*
+│⿻ *ADIL KAMAAL*
 │  *Youtube Mp4 Player* ✨
 │⿻ *Title:* ${videoInfo.title}
 │⿻ *Duration:* ${videoInfo.duration}
@@ -2613,7 +2613,7 @@ case 'ytvdoc':
 
           const captionText = `
 ╭═════════•∞•══╮
-│⿻ *GSS BOTWA*
+│⿻ *ADIL KAMAAL*
 │  *Youtube Mp4 Player* ✨
 │⿻ *Title:* ${firstVideo.title}
 │⿻ *Duration:* ${firstVideo.duration}
@@ -2680,7 +2680,7 @@ case 'ytmp3':
   },
   caption: `
 ╭═════════•∞•══╮
-│⿻ *GSS BOTWA*
+│⿻ *ADIL KAMAAL*
 │  *Youtube Player* ✨
 │⿻ *Title:* ${videoInfo.title}
 │⿻ *Duration:* ${videoInfo.timestamp}
@@ -2729,7 +2729,7 @@ case 'ytmp3':
   },
   caption: `
 ╭═════════•∞•══╮
-│⿻ *GSS BOTWA*
+│⿻ *ADIL KAMAAL*
 │  *Youtube Mp3 Player* ✨
 │⿻ *Title:* ${firstVideo.title}
 │⿻ *Duration:* ${firstVideo.timestamp}
@@ -2798,7 +2798,7 @@ case 'ytmp3doc':
   },
   caption: `
 ╭═════════•∞•══╮
-│⿻ *GSS BOTWA*
+│⿻ *ADIL KAMAAL*
 │  *Youtube Player* ✨
 │⿻ *Title:* ${videoInfo.title}
 │⿻ *Duration:* ${videoInfo.timestamp}
@@ -2847,7 +2847,7 @@ case 'ytmp3doc':
   },
   caption: `
 ╭═════════•∞•══╮
-│⿻ *GSS BOTWA*
+│⿻ *ADIL KAMAAL*
 │  *Youtube Mp3 Player* ✨
 │⿻ *Title:* ${firstVideo.title}
 │⿻ *Duration:* ${firstVideo.timestamp}
@@ -2964,7 +2964,7 @@ const uploadDate = formatUploadDate(videoInfo.videoDetails.uploadDate) || 'N/A';
         // Construct caption with audio details
         const pollMessage = `
 ╭═════════•∞•══╮
-│⿻ *GSS BOTWA*
+│⿻ *ADIL KAMAAL*
 │  *Youtube Mp4 Player* ✨
 │⿻ *Title:* ${title}
 │⿻ *Author:* ${videoInfo.videoDetails.author.name || 'N/A'}
@@ -3041,7 +3041,7 @@ const uploadDate = formatUploadDate(videoInfo.videoDetails.uploadDate) || 'N/A';
         // Construct caption with audio details
         const caption = `
 ╭═════════•∞•══╮
-│⿻ *GSS BOTWA*
+│⿻ *ADIL KAMAAL*
 │  *Youtube Mp4 Player* ✨
 │⿻ *Title:* ${title}
 │⿻ *Author:* ${videoInfo.videoDetails.author.name || 'N/A'}
@@ -3119,7 +3119,7 @@ const uploadDate = formatUploadDate(videoInfo.videoDetails.uploadDate) || 'N/A';
         // Construct caption with audio details
         const caption = `
 ╭═════════•∞•══╮
-│⿻ *GSS BOTWA*
+│⿻ *ADIL KAMAAL*
 │  *Youtube Mp4 Player* ✨
 │⿻ *Title:* ${title}
 │⿻ *Author:* ${videoInfo.videoDetails.author.name || 'N/A'}
@@ -3202,7 +3202,7 @@ case '𝐕𝐢𝐝𝐞𝐨': {
 
 const captionText = `
 ╭═════════•∞•══╮
-│⿻ *GSS BOTWA*
+│⿻ *ADIL KAMAAL*
 │  *Youtube Mp4 Player* ✨
 │⿻ *Title:* ${title}
 │⿻ *Author:* ${videoInfo.videoDetails.author.name || 'N/A'}
@@ -4068,7 +4068,7 @@ case 'mediafire': {
                 },
                 fileName: fileInfo[0].nama,
                 mimetype: fileInfo[0].mime,
-                caption: `Downloaded by gss botwa: ${fileInfo[0].nama}`,  // Add your desired caption
+                caption: `Downloaded by Adil Kamaal: ${fileInfo[0].nama}`,  // Add your desired caption
             },
             { quoted: m }
         );
@@ -4144,7 +4144,7 @@ case 'fb': case 'fbdl': case 'facebook': {
     try {
         const result = await fg.fbdl(args[0]);
         const tex = `
-  *Video Details* 
+  *Adil FB Video* 
 📽️ *Title*: ${result.title}
 `;
 
@@ -4186,7 +4186,7 @@ await m.reply(`Please wait...`);
     try {
     let res = await igs.igStalk(args[0])
     let te = `
-┌──「 *Information* 
+┌──「 *Adil Instagram* 
 ▢ *🔖Name:* ${res.name} 
 ▢ *🔖Username:* ${res.username}
 ▢ *👥Follower:* ${res.followersH}
@@ -4267,7 +4267,7 @@ case 'gimage': case"img": {
             const imageUrl = topImages[i].url;
             let Message = {
                 image: { url: imageUrl },
-                caption: `*-------「 GIMAGE SEARCH 」-------*\n🤠 *Query* : ${text}\n\n🔗 *Image ${i + 1} Url* : ${imageUrl}`,
+                caption: `*-------「 GIMAGE Adil Kamaal 」-------*\n🤠 *Query* : ${text}\n\n🔗 *Image ${i + 1} Url* : ${imageUrl}`,
             };
 
             setTimeout(() => {
@@ -4668,7 +4668,7 @@ case 'tiktoknowm':
       fs.writeFileSync(`./${randomName}`, videoBuffer);
 
       // Send the video using gss.sendMessage with the saved video
-      await gss.sendMessage(m.chat, { video: fs.readFileSync(`./${randomName}`), mimetype: 'video/mp4', caption: 'Downloaded by gss botwa' }, { quoted: m });
+      await gss.sendMessage(m.chat, { video: fs.readFileSync(`./${randomName}`), mimetype: 'video/mp4', caption: 'Downloaded by Adil Kamaal' }, { quoted: m });
 
       // Delete the temporary file
       fs.unlinkSync(`./${randomName}`);
@@ -5133,7 +5133,7 @@ case 'poll': {
     if (!isAdmins) return m.reply('Tʜɪs ғᴇᴀᴛᴜʀᴇ ɪs ᴏɴʟʏ ғᴏʀ ɢʀᴏᴜᴘ ᴀᴅᴍɪɴ, ᴏᴡɴᴇʀ ᴀɴᴅ ʙᴏᴛᴀᴅᴍɪɴ, ʏᴏᴜ ᴄᴀɴɴᴏᴛ ᴜsᴇ ɪᴛ.')
             let [poll, opt] = text.split("|")
             if (text.split("|") < 2)
-                return await m.reply(`Mention question and atleast 2 options\nExample: ${prefix}poll Who is best admin?|sid bhai,gautam`
+                return await m.reply(`Mention question and atleast 2 options\nExample: ${prefix}poll Who is best admin?|Adil Kamaal,Haseeb`
                 )
             let options = []
             for (let i of opt.split(',')) {
@@ -5661,7 +5661,7 @@ case 'allmenu': {
     await doReact("📁");
     let a = db.data.users[m.sender];
     let introText = `
-╭──═❮ *GssBotwa* ❯═─┈•
+╭──═❮ *Adil Kamaal* ❯═─┈•
 │ Hi *${pushname}* 👋  
 ╰–❖ *${greetingTime}* 😄 
 
