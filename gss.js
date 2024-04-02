@@ -391,7 +391,7 @@ try {
   if (textLower === 'send' || textLower === 'statusdown' || textLower === 'take') {
     const quotedMessage = m.msg.contextInfo.quotedMessage;
 
-    if (quotedMessage && quotedMessage.key && quotedMessage.key.remoteJid === 'status@broadcast') {
+    if (quotedMessage) {
       // Check if it's an image
       if (quotedMessage.imageMessage) {
         let imageCaption = quotedMessage.imageMessage.caption;
@@ -407,8 +407,6 @@ try {
         gss.sendMessage(m.chat, { video: { url: videoUrl }, caption: videoCaption });
         m.reply('*Status Download Successful: by Adil_Kamaal*');
       }
-    } else {
-      m.reply('Please quote a message from "status@broadcast" to process.');
     }
   }
 } catch (error) {
